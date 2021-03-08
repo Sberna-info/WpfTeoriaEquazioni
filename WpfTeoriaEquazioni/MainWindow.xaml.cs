@@ -27,65 +27,72 @@ namespace WpfTeoriaEquazioni
 
         private void bntCalcola_Click(object sender, RoutedEventArgs e)
         {
-            string str = Convert.ToString(txtInserisci.Text);
-            switch (str)
+            try
             {
-                case "1":
-                    int a = int.Parse(txtA.Text);
-                    bool b = IsDetermined(a);
-                    if (b)
-                        lblRisultato.Content = "l'equazione è determinata";
-                    else
-                        lblRisultato.Content = "l'equazione non è determinata";
-                    break;
+                string str = Convert.ToString(txtInserisci.Text);
+                switch (str)
+                {
+                    case "1":
+                        int a = int.Parse(txtA.Text);
+                        bool b = IsDetermined(a);
+                        if (b)
+                            lblRisultato.Content = "l'equazione è determinata";
+                        else
+                            lblRisultato.Content = "l'equazione non è determinata";
+                        break;
 
-                case "2":
-                    int a1 = int.Parse(txtA.Text);
-                    int b1 = int.Parse(txtB.Text);
-                    bool b2 = IsInconsisted(a1, b1);
-                    if (b2)
-                        lblRisultato.Content = "l'equazione è impossibile";
-                    else
-                        lblRisultato.Content = "l'equazione non è impossibile";
-                    break;
+                    case "2":
+                        int a1 = int.Parse(txtA.Text);
+                        int b1 = int.Parse(txtB.Text);
+                        bool b2 = IsInconsisted(a1, b1);
+                        if (b2)
+                            lblRisultato.Content = "l'equazione è impossibile";
+                        else
+                            lblRisultato.Content = "l'equazione non è impossibile";
+                        break;
 
-                case "3":
-                    int a2 = int.Parse(txtA.Text);
-                    bool b3 = IsDegree2(a2);
-                    if (b3)
-                        lblRisultato.Content = "è di secondo grado";
-                    else
-                        lblRisultato.Content = "non è di secondo grado";
-                    break;
+                    case "3":
+                        int a2 = int.Parse(txtA.Text);
+                        bool b3 = IsDegree2(a2);
+                        if (b3)
+                            lblRisultato.Content = "è di secondo grado";
+                        else
+                            lblRisultato.Content = "non è di secondo grado";
+                        break;
 
-                case "4":
-                    int a3 = int.Parse(txtA.Text);
-                    int b4 = int.Parse(txtB.Text);
-                    int c = int.Parse(txtC.Text);
-                    double b5 = Delta(a3, b4, c);
-                    lblRisultato.Content = $"Il delta è: {b5} ";
-                    break;
-                case "5":
-                    int a4 = int.Parse(txtA.Text);
-                    int b6 = int.Parse(txtB.Text);
-                    int c1 = int.Parse(txtC.Text);
-                    string s = Equazione(a4, b6, c1);
-                    lblRisultato.Content = s;
-                    break;
+                    case "4":
+                        int a3 = int.Parse(txtA.Text);
+                        int b4 = int.Parse(txtB.Text);
+                        int c = int.Parse(txtC.Text);
+                        double b5 = Delta(a3, b4, c);
+                        lblRisultato.Content = $"Il delta è: {b5} ";
+                        break;
+                    case "5":
+                        int a4 = int.Parse(txtA.Text);
+                        int b6 = int.Parse(txtB.Text);
+                        int c1 = int.Parse(txtC.Text);
+                        string s = Equazione(a4, b6, c1);
+                        lblRisultato.Content = s;
+                        break;
 
-                case "6":
-                    double a5 = int.Parse(txtA.Text);
-                    double b7 = int.Parse(txtB.Text);
-                    string s1 = EquationDegree1(a5, b7);
-                    lblRisultato.Content = s1;
-                    break;
+                    case "6":
+                        double a5 = int.Parse(txtA.Text);
+                        double b7 = int.Parse(txtB.Text);
+                        string s1 = EquationDegree1(a5, b7);
+                        lblRisultato.Content = s1;
+                        break;
 
 
-                default:
-                    lblRisultato.Content = "valore inserito non valido";
-                    break;
+                    default:
+                        lblRisultato.Content = "valore inserito non valido";
+                        break;
 
+                }
+            }catch(Exception)
+            {
+                lblRisultato.Content = "prima di premere il bottone inserisci\ncosa ti chiede il problema";
             }
+           
         }
 
         private static bool IsDetermined(double a)

@@ -7,7 +7,13 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button x:Name="bntCalcola" Content="Calcola" HorizontalAlignment="Left" Margin="530,310,0,0" VerticalAlignment="Top" Width="100" Height="45" Click="bntCalcola_Click"/>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                <GradientStop Color="Black" Offset="1"/>
+                <GradientStop Color="#FF00B9FF" Offset="0.493"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Button x:Name="bntCalcola" Content="Calcola" HorizontalAlignment="Left" Margin="530,310,0,0" VerticalAlignment="Top" Width="100" Height="45" Click="bntCalcola_Click" BorderBrush="Black" Background="White" Foreground="#FF00ABD1"/>
         <Label x:Name="lblInserisci" Content="Inserisci il numero accanto di cosa vuoi eseguire:" HorizontalAlignment="Left" Margin="20,19,0,0" VerticalAlignment="Top" Width="285" RenderTransformOrigin="0.5,0.5">
             <Label.RenderTransform>
                 <TransformGroup>
@@ -24,14 +30,14 @@
         <Label Content="4 se vuoi calcolare il delta, richiede a b e c" HorizontalAlignment="Left" Margin="25,143,0,0" VerticalAlignment="Top" Width="240"/>
         <Label Content="5 se vuoi il risultato di un'equazione di secondo grado, richiede a b e c" HorizontalAlignment="Left" Margin="25,174,0,0" VerticalAlignment="Top"/>
         <Label Content="6 se vuoi il risultato di un'equazione di primo grado, richiede a e b" HorizontalAlignment="Left" Margin="25,205,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtInserisci" HorizontalAlignment="Left" Height="23" Margin="295,22,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtInserisci" HorizontalAlignment="Left" Height="23" Margin="295,22,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="White"/>
         <Label Content="Inserisci a:" HorizontalAlignment="Left" Margin="505,22,0,0" VerticalAlignment="Top"/>
         <Label Content="Inserisci b:" HorizontalAlignment="Left" Margin="505,53,0,0" VerticalAlignment="Top"/>
         <Label Content="Inserisci c:" HorizontalAlignment="Left" Margin="505,84,0,0" VerticalAlignment="Top" RenderTransformOrigin="0,-0.462"/>
         <TextBox x:Name="txtA" HorizontalAlignment="Left" Height="23" Margin="574,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="txtB" HorizontalAlignment="Left" Height="23" Margin="574,56,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txtC" HorizontalAlignment="Left" Height="23" Margin="574,87,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.208,0.478"/>
-        <Label x:Name="lblRisultato" Content="" HorizontalAlignment="Left" Margin="450,160,0,0" VerticalAlignment="Top" Width="315"/>
+        <TextBox x:Name="txtC" HorizontalAlignment="Left" Height="23" Margin="574,87,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.208,0.478" SelectionBrush="#FF005EA8"/>
+        <Label x:Name="lblRisultato" Content="" HorizontalAlignment="Left" Margin="450,160,0,0" VerticalAlignment="Top" Width="315" Background="White" BorderBrush="Black" Foreground="Black"/>
 
     </Grid>
 </Window>
