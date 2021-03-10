@@ -1,0 +1,22 @@
+﻿<Window x:Class="WpfTeoriaEquazioni.Degree2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfTeoriaEquazioni"
+        mc:Ignorable="d" WindowStartupLocation="CenterScreen" ResizeMode="NoResize"
+        Title="Degree2" Height="400" Width="500">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black" Offset="1"/>
+                <GradientStop Color="#FF00CAF7" Offset="1"/>
+                <GradientStop Color="#FF00ECF7" Offset="0.577"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Button x:Name="bntCalcola" Content="Calcola" HorizontalAlignment="Left" Margin="269,190,0,0" VerticalAlignment="Top" Width="89" Click="bntCalcola_Click" Height="31" Background="Black" Foreground="#FF00E8FF"/>
+        <Label Content="Inserisci il valore di a:" HorizontalAlignment="Left" Margin="117,126,0,0" VerticalAlignment="Top" Height="36" Width="126"/>
+        <Label x:Name="lblRisultato" Content="" HorizontalAlignment="Left" Margin="128,240,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.5,-0.962" Width="230" Height="41" Background="White"/>
+        <TextBox x:Name="txtA" HorizontalAlignment="Left" Height="36" Margin="248,126,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="142"/>
+    </Grid>
+</Window>

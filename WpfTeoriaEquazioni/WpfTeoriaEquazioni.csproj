@@ -55,6 +55,30 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Degree2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Delta.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Determinata.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EquazionePrimo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EquazioneSecondo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Impossibile.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -62,6 +86,24 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Degree2.xaml.cs">
+      <DependentUpon>Degree2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Delta.xaml.cs">
+      <DependentUpon>Delta.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Determinata.xaml.cs">
+      <DependentUpon>Determinata.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EquazionePrimo.xaml.cs">
+      <DependentUpon>EquazionePrimo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EquazioneSecondo.xaml.cs">
+      <DependentUpon>EquazioneSecondo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Impossibile.xaml.cs">
+      <DependentUpon>Impossibile.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
